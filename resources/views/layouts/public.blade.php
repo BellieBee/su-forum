@@ -9,21 +9,34 @@
 	<title>Foro de Steven Universe</title>
 
 	<!-- Styles  -->
-	{!! HTML::style("vendor/bootstrap-3/css/bootstrap.min.css") !!}
+	{!! Html::style("vendor/bootstrap-3/css/bootstrap.min.css") !!}
+	{!! Html::style("css/style.css") !!}
 
 	@yield('styles')
 </head>
 <body>
 	@include('partials.nav-bar')
 
+	@include('partials.banner')
+
+	<hr>
+
 	<div class="container">
 
 		@yield('content')
 		
 	</div>
+
+	<hr>
+	<footer class="foot">
+		<div class="container">
+			<p><span class="glyphicon glyphicon-star" aria-hidden="true"></span>SU Forum es propiedad intelectual de DreamCatcher &copy; - 2017</p>
+		</div>
+	</footer>
+
 	
 	<!-- Scripts -->
-	{!! HTML::script('js/jquery-3.1.1.min.js') !!}
-	{!! HTML::script('vendor/bootstrap-3/js/bootstrap.min.js') !!}
+	{!! Html::script('js/jquery-3.1.1.min.js') !!}
+	{!! Html::script('vendor/bootstrap-3/js/bootstrap.min.js') !!}
 </body>
 </html>
